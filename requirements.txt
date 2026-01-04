@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+crewai
+langchain
+langchain-community
+crewai

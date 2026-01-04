@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Task Breakdown Agent</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <header class="topbar">
+    <div class="title">AI Task Breakdown Agent</div>
+    <div class="subtitle">Agentic planner</div>
+  </header>
+
+  <section class="input-panel">
+    <label>Goal</label>
+    <div class="input-row">
+      <input id="goal" placeholder="Build a portfolio website, plan a trip…" />
+      <button onclick="generatePlan()">Plan</button>
+    </div>
+    <div id="status" class="status hidden">Thinking…</div>
+  </section>
+
+  <section class="workspace hidden" id="resultCard">
+
+    <div class="workspace-header">
+      <div class="tabs">
+        <button class="tab active" onclick="showTab('plan')">Execution Plan</button>
+        <button class="tab" onclick="showTab('tools')">Recommended Tools</button>
+      </div>
+
+      <div class="progress-inline">
+        <div class="progress-track">
+          <div id="overallProgressBar"></div>
+        </div>
+        <span id="progressPercent">0%</span>
+      </div>
+    </div>
+
+    <div id="planTab">
+      <div id="steps" class="steps"></div>
+    </div>
+
+    <div id="toolsTab" class="hidden">
+      <ul id="tools" class="tools"></ul>
+    </div>
+
+  </section>
+
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

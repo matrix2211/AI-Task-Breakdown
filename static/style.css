@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: #0b1020;
+  color: #e5e7eb;
+}
+
+.app {
+  max-width: 960px;
+  margin: auto;
+  padding: 32px 24px 60px;
+}
+
+/* Header */
+.topbar {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+/* Input */
+.input-panel {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+label {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+button {
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #4f46e5;
+}
+
+.status {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #93c5fd;
+}
+
+/* Workspace */
+.workspace {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+/* Tabs + Progress */
+.workspace-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.tabs {
+  display: flex;
+  gap: 6px;
+}
+
+.tab {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid #334155;
+  background: transparent;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.tab.active {
+  background: #6366f1;
+  color: white;
+  border-color: transparent;
+}
+
+.progress-inline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.progress-track {
+  width: 140px;
+  height: 6px;
+  background: #1e293b;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+#overallProgressBar {
+  height: 100%;
+  width: 0%;
+  background: #6366f1;
+  transition: width 0.25s ease;
+}
+
+/* ✅ FINAL STEP FIX */
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #1e293b;
+  background: #020617;
+}
+
+.step.completed {
+  opacity: 0.45;
+}
+
+/* Checkbox: fixed size, no growth */
+.step input {
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  accent-color: #6366f1;
+}
+
+/* Text: ALWAYS full width, left aligned */
+.step-text {
+  flex: 1;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Tools */
+.tools {
+  padding-left: 18px;
+}
+
+.tools li {
+  margin-bottom: 10px;
+  color: #cbd5f5;
+}
+
+.hidden {
+  display: none;
+}
